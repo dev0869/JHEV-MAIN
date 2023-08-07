@@ -1,0 +1,35 @@
+.filterbut {
+  color: orangered;
+  border: 1px solid orangered;
+  padding: 4px 14px;
+  border-radius: 10px;
+}
+.seedetail {
+  margin-top: 16px;
+  padding: 12px;
+}
+.tttt {
+  border: 1px solid;
+  height: 35px;
+  border-radius: 5px;
+  width: 90px;
+}
+.tttt::placeholder {
+  font-size: 12px;
+  padding: 2px;
+}
+.seedetail h1 {
+  font-size: 16px;
+}
+.divbox {
+  padding: 20px 80px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 0 20px 3px rgba(150, 190, 238, 0.15);
+}
+.divbox:hover {
+  box-shadow: 0 0 30px 8px rgba(150, 190, 238, 0.25);
+}
+.shadowss {
+  background: #f9fafc !important;
+}

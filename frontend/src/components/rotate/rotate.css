@@ -1,0 +1,207 @@
+.cardmain {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 500px;
+  height: 450px;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+.card span {
+  position: absolute;
+  top: 0;
+  left: calc(100% / 5 * var(--i));
+  width: calc(100% / 5);
+  height: 100%;
+}
+.card img {
+  top: 0;
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+}
+.card img:nth-child(2),
+.card span:hover + img {
+  opacity: 1;
+}
+
+.Rotatebanner {
+  text-align: center;
+}
+
+.Rotatebanner h1 {
+  font-family: speed;
+  font-size: 40px;
+  color: orangered;
+  padding: 10px;
+}
+.cardmainimg {
+  margin-top: 10px;
+  height: 46px;
+}
+.banner {
+  padding: 40px 0;
+  background: linear-gradient(302deg, #99d5ff 0, #fff 22.91%) !important;
+}
+.bgeffect {
+  background: url(../../assets//bg-effect.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.banner2 {
+  background: url(../../assets//bg-effect.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding: 30px 40px;
+}
+.bannerc2 h1 {
+  font-family: speed;
+  font-size: 50px;
+}
+.varients {
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+.varients h2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+.styleinput input {
+  padding: 20px;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+input ::-moz-focus-outer {
+  background-color: aliceblue;
+}
+.bannerc1 {
+  flex: 3;
+}
+.bannerc2 {
+  flex: 4;
+}
+.specdetail p {
+  font-size: 20px;
+}
+.specdetail h1 {
+  font-size: 25px;
+}
+.stack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 205px;
+  justify-content: space-between;
+}
+.box {
+  width: 75px;
+  padding: 10px;
+  height: 80px;
+  font-size: 45px;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 20px 0;
+  color: #fff;
+  background-color: #e40037;
+  -webkit-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
+}
+.lowcontent {
+  text-align: center;
+  padding: "20px 80px";
+  font-family: heavy;
+}
+.er{
+    padding: 40px 20px;
+}
+.lowcontent h1 {
+  font-weight: 900;
+  color: red;
+  font-family: heavy;
+  font-size: 33px;
+}
+
+/* media querry................. */
+@media screen and (max-width: 900px) {
+  .stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 205px;
+    justify-content: space-between;
+  }
+  .stack ul {
+    display: none;
+  }
+  .Rotatebanner h1 {
+    font-family: speed;
+    font-size: 40px;
+    color: orangered;
+    padding: 10px;
+  }
+  .banner2{
+        flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Rotatebanner h1 {
+    font-family: speed;
+    font-size: 30px;
+    color: orangered;
+    padding: 10px;
+  }
+  .spec {
+    display: flex;
+    border-radius: 10px;
+    padding: 40px 40px;
+    background-color: #fef8f2;
+    gap: 5px;
+    transform: skewX(360deg);
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    width: 70%;
+  }
+  .hide {
+    display: none;
+  }
+  .lowcontent h1 {
+    text-align: center;
+
+    font-family: heavy;
+    font-size: 33px;
+  }
+  .specdetail {
+    display: none;
+  }
+  .er{
+    display: none;
+       padding: 0px ;
+  }
+  .bannerc2 h1 {
+  
+    font-size: 26px;
+}
+.varients h2 {
+    font-size: 16px;
+}
+.cardmainimg{
+    display: none;
+}
+}

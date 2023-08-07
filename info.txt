@@ -1,0 +1,36 @@
+// Fist api of jhev
+
+To rgister user api = "http://127.0.0.1:8000/api/user/register"
+data Format  = {
+  "name":"Pankaj",
+  "email":"admin2@gmail.com",
+  "mobile":"00000000f",
+  "password":"123"
+}
+
+// Second api of jhev
+
+To Login user api = "http://127.0.0.1:8000/api/user/login"
+data Format  = {
+  "email":"admin2@gmail.com",
+  "password":"123"
+}
+
+// Tird api of jhev
+
+To add book test http://127.0.0.1:8000/api/testride/add
+data Format = {
+  "name": "pankaj",
+  "email": "pankaj@gmail.com",
+  "mobile": "123",
+  "bike": "alpha",
+  "state": "harya",
+  "city": "ballabgarjh"
+}
+if (res.data.name !== undefined) {
+      toast.success("Registeration Sucessfull");
+      localStorage.setItem("user", JSON.stringify(res.data));
+      navigate("/");
+    } else {
+      toast.error(res.data);
+    }
