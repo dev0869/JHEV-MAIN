@@ -32,10 +32,10 @@ const InputEffect = () => {
     });
   const [isFocused, setIsFocused] = useState(false);
  const productArr = [
-    "Alpha k1",
-    "Alpha R1",
-    "Alpha R3",
-    "Alpha R5",
+    "Alfa k1",
+    "Alfa R1",
+    "Alfa R3",
+    "Alfa R5",
     "Delta R3",
     "Delta V6",
     "Delta E5",

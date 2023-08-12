@@ -3,19 +3,28 @@ import img from "../../assets/left-rotate.png";
 import { addCart } from "../../features/cart/cartSlice";
 import img2 from "../../assets/right-rotate.png";
 import { BsBatteryCharging } from "react-icons/bs";
+import { RiPriceTag3Line } from "react-icons/ri";
+import { BsFillAlarmFill } from "react-icons/bs";
+
 import { GiPlantsAndAnimals } from "react-icons/gi";
 import { useDispatch } from "react-redux";
 import { BiSolidParking } from "react-icons/bi";
 import { BsSpeedometer } from "react-icons/bs";
-import { GiOrange, GiCharging, GiTireTracks } from "react-icons/gi";
+import {
+  GiOrange,
+  GiCharging,
+  GiTireTracks,
+  GiSpeedometer,
+} from "react-icons/gi";
 import { FaMotorcycle } from "react-icons/fa";
 
 import "./rotate.css";
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Iconss } from "../../constants/Scooter";
 const Rotate = ({ data }) => {
   const dispatch = useDispatch();
-  const { rotate, png, name, id, image,price } = data;
+  const { rotate, png, name, id, image, price, features } = data;
   console.log(data);
   const cardRef = useRef(null);
   const handlecart = () => {
@@ -24,7 +33,7 @@ const Rotate = ({ data }) => {
         name: name,
         id: id,
         img: image,
-        price:price,
+        price: price,
       })
     );
   };
@@ -65,13 +74,18 @@ const Rotate = ({ data }) => {
           <h1> -360 Degree. EXPERIENCE-</h1>
         </div>
         <div className="stack">
-          <ul>
+          <ul className="fr"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
             <li
               style={{
                 display: "flex",
                 alignItems: "center",
                 margin: "12px",
-                gap: "12px",
               }}
             >
               <h1>Environment Friendly</h1>
@@ -86,7 +100,11 @@ const Rotate = ({ data }) => {
               }}
             >
               <h1>Easy to Park</h1>
-              <BiSolidParking size={12} className="box" />
+              <BiSolidParking
+                size={12}
+                style={{ width: "65px", marginLeft: "19px" }}
+                className="box"
+              />
             </li>{" "}
             <li
               style={{
@@ -97,7 +115,11 @@ const Rotate = ({ data }) => {
               }}
             >
               <h1>Cost Effective</h1>
-              <GiPlantsAndAnimals size={12} className="box" />
+              <RiPriceTag3Line
+                size={12}
+                style={{ width: "65px", marginLeft: "5px" }}
+                className="box"
+              />
             </li>
           </ul>
 
@@ -126,7 +148,13 @@ const Rotate = ({ data }) => {
             <img className="cardmainimg" src={img2} alt="sds" />
           </div>
 
-          <ul>
+          <ul className="fr"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
             <li
               style={{
                 display: "flex",
@@ -135,8 +163,8 @@ const Rotate = ({ data }) => {
                 gap: "12px",
               }}
             >
-              <h1>Environment Friendly</h1>
-              <GiPlantsAndAnimals size={12} className="box" />
+              <h1>Anti-Theft Alarm</h1>
+              <BsFillAlarmFill size={12} className="box" />
             </li>{" "}
             <li
               style={{
@@ -146,8 +174,8 @@ const Rotate = ({ data }) => {
                 gap: "12px",
               }}
             >
-              <h1>Environment Friendly</h1>
-              <GiPlantsAndAnimals size={12} className="box" />
+              <h1>USB 2.0 Charging</h1>
+              <GiCharging size={12} className="box" />
             </li>{" "}
             <li
               style={{
@@ -157,8 +185,8 @@ const Rotate = ({ data }) => {
                 gap: "12px",
               }}
             >
-              <h1>Environment Friendly</h1>
-              <GiPlantsAndAnimals size={12} className="box" />
+              <h1>Speed Control</h1>
+              <GiSpeedometer size={12} className="box" />
             </li>
           </ul>
         </div>
@@ -186,7 +214,7 @@ const Rotate = ({ data }) => {
       <div style={{ background: "#FAFCEA", padding: "40px 0" }}>
         <div className="Rotatebanner ">
           <h1 style={{ color: "black" }}>-{name} Specification-</h1>
-
+          <br />
           <Stack
             display={"flex"}
             direction={"row"}
@@ -194,36 +222,29 @@ const Rotate = ({ data }) => {
             gap={3}
             justifyContent={"center"}
           >
-            <div className="spec">
-              <FaMotorcycle size={60} />
-              <h2>-Motor-</h2>
-              <p>7000vh</p>
-            </div>
-            <div className="spec">
-              <BsBatteryCharging size={60} />
-              <h2>-Battery Capacity-</h2>
-              <p>3.5 kwh</p>
-            </div>
-            <div className="spec">
-              <GiCharging size={60} />
-              <h2>-Charging Time-</h2>
-              <p>3-4 hr</p>
-            </div>
-            <div className="spec">
-              <GiOrange size={60} />
-              <h2>-Range-</h2>
-              <p>140-150 km/hr</p>
-            </div>
-            <div className="spec">
-              <GiTireTracks size={60} />
-              <h2>-F/R Breaks-</h2>
-              <p>Disc Break</p>
-            </div>
-            <div className="spec">
-              <BsSpeedometer size={60} />
-              <h2>-Top Speed-</h2>
-              <p>80-90km/hr</p>
-            </div>
+            {features.map((e, i) => {
+              const { value, name, icon } = e;
+
+              if (
+                name !== "Total-Range" &&
+                name !== "Speed" &&
+                name !== "Charging Time"
+              ) {
+                return (
+                  <>
+                    {
+                      <div className="spec" key={i}>
+                        <div style={{ fontSize: 60 }}>{Iconss[i]}</div>
+                        <h2>-{name}-</h2>
+                        <p>{value}</p>
+                      </div>
+                    }
+                  </>
+                );
+              }
+
+              return null; // Skip the specified features
+            })}
           </Stack>
         </div>
       </div>
@@ -241,7 +262,7 @@ const Rotate = ({ data }) => {
         <div
           style={{
             textAlign: "center",
-    
+
             fontFamily: "heavy",
             display: "flex",
             justifyContent: "space-around",
@@ -249,19 +270,23 @@ const Rotate = ({ data }) => {
           }}
           className="er"
         >
-   
-          <div className="specdetail">
-            <h1 style={{ fontWeight: 900 }}>85kmph </h1>
-            <p>Top Speed</p>
-          </div>
-          <div className="specdetail">
-            <h1 style={{ fontWeight: 900 }}>120kmph </h1>
-            <p>Range</p>
-          </div>
-          <div className="specdetail">
-            <h1 style={{ fontWeight: 900 }}>4~5 Hours </h1>
-            <p>Charging Time</p>
-          </div>
+          {features.map((e, i) => {
+            const { value, name } = e;
+            if (
+              name === "Total-Range" ||
+              name === "Speed" ||
+              name === "Charging Time"
+            ) {
+              return (
+                <div key={i}>
+                  <div className="specdetail">
+                    <h1 style={{ fontWeight: 900 }}>{value}</h1>
+                    <p>{name}</p>
+                  </div>
+                </div>
+              );
+            }
+          })}
         </div>
       </Stack>
 
@@ -271,7 +296,6 @@ const Rotate = ({ data }) => {
         </div>
         <div className="bannerc2">
           <h1>{name} PRICE</h1>
-    
 
           <div className="varients">
             <h2>Varients</h2>
@@ -286,7 +310,7 @@ const Rotate = ({ data }) => {
             <Link to={"/cart"}>
               <button
                 onClick={handlecart}
-                style={{ padding: "8px",marginTop:'20px', fontSize: "18px" }}
+                style={{ padding: "8px", marginTop: "20px", fontSize: "18px" }}
               >
                 Buy Now
               </button>

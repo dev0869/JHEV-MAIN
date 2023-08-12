@@ -39,12 +39,16 @@ export const SmNavButton = () => {
       textAlign={"center"}
       className="navButtons"
     >
-      <button onClick={handleShow}>
-        <span>Book Now</span>
-      </button>
-      <button>
-        <span>Become a Dealer</span>
-      </button>
+      <Link to={"/testbookride"}>
+        <button>
+          <span>Book Now</span>
+        </button>
+      </Link>
+      <Link to={"/dealer"}>
+        <button>
+          <span>Become a Dealer</span>
+        </button>
+      </Link>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -132,8 +136,7 @@ export const SmNavButton = () => {
               />
             </Form.Group>
             <Modal.Footer>
-           
-              <button  type="submit" onClick={handleClose}>
+              <button type="submit" onClick={handleClose}>
                 Save Changes
               </button>
             </Modal.Footer>
@@ -147,19 +150,6 @@ export const SmNavButton = () => {
 const NavButton = () => {
   const dispatch = useDispatch();
 
-  // const { values, handleChange, handleSubmit } = useFormik({
-  //   initialValues: {
-  //     name: "",
-  //     email: "",
-  //     number: "",
-  //     otp: "",
-  //     state: "",
-  //     city: "",
-  //   },
-  //   onSubmit: (values) => {
-  //     dispatch(bookUser(values));
-  //   },
-  // });
 
   const [show, setShow] = useState(false);
 

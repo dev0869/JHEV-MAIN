@@ -1,7 +1,7 @@
 import "./Product.css";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import video from "../../assets/Video/video.mp4";
+import video from "../../assets/Video/4.mp4";
 import BookNowModal from "../BookNowModal";
 import { Link, useParams } from "react-router-dom";
 import Rotate from "../rotate/Rotate";
@@ -24,7 +24,7 @@ const Product = () => {
   }, [pathname]);
 
 
-  console.log(productData);
+
 
   const handlecart = () => {
   
@@ -46,12 +46,7 @@ const Product = () => {
         <video controls autoPlay>
           <source src={video} />
         </video>
-        {/* <div className="videobut">
-          <button onClick={handleShow}>Test Ride</button>
-          <Link to={"/cart"}>
-            <button onClick={handlecart}>Book Now</button>
-          </Link>
-        </div> */}
+   
       </div>
      
       <BookNowModal show={show} onHide={() => setShow(false)} />

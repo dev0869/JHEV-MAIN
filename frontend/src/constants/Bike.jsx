@@ -1,6 +1,8 @@
 import img1 from "../assets/images/bike/bike3/9.jpg";
 import img2 from "../assets/images/bike/bike1/Y1.jpg";
 import img3 from "../assets/images/bike/bike2/Red 3.jpg";
+import { BsSpeedometer } from "react-icons/bs";
+
 
 import svg from "../assets/images/bike/png/6.png";
 
@@ -27,14 +29,56 @@ export const Bike = [
     ],
     png: svg2,
     price:"1,99,000",
-    spec: [
+   features: [
       {
-        motor: "Engine",
-        battery: "V-twin",
-        charging: "",
-        range: "",
-        speed: "",
-        brake: "",
+        value: "3000W",
+        name: "Motor Type & Power",
+        icon: <BsSpeedometer  />,
+      },
+      {
+        value: "72 V",
+        icon: <BsSpeedometer  />,
+        name: "Controller Type",
+      },
+      {
+        icon: <BsSpeedometer  />,
+        value: "Digital",
+        name: "Speedo Meter",
+      },
+      {
+        value: "72 V 60 ah",
+        icon: <BsSpeedometer  />,
+        name: "Battery Capacity",
+      },
+      {
+        value: "90 - 100 kmph",
+        icon: <BsSpeedometer  />,
+        name: "Speed",
+      },
+      {
+        value: " 150 - 200 km",
+        icon: <BsSpeedometer  />,
+        name: "Total-Range",
+      },
+      {
+        value: "17 inch/17 inch",
+        icon: <BsSpeedometer  />,
+        name: "Tyre Specification F & R",
+      },
+      {
+        value: "3 to 4 hr",
+        icon: <BsSpeedometer  />,
+        name: "Charging Time",
+      },
+      {
+        icon: <BsSpeedometer  />,
+        value: "Telescopic & Hydraulic",
+        name: "Suspension F & R",
+      },
+      {
+        icon: <BsSpeedometer  />,
+        value: "Disc",
+        name: "Break F & R",
       },
     ],
   },
@@ -53,14 +97,56 @@ export const Bike = [
     ],
     png: svg,
     price:"1,59,000",
-    spec: [
+   features: [
       {
-        motor: "Engine",
-        battery: "V-twin",
-        charging: "",
-        range: "",
-        speed: "",
-        brake: "",
+        value: "3000W",
+        name: "Motor Type & Power",
+        icon: <BsSpeedometer  />,
+      },
+      {
+        value: "72 V",
+        icon: <BsSpeedometer  />,
+        name: "Controller Type",
+      },
+      {
+        icon: <BsSpeedometer  />,
+        value: "Digital",
+        name: "Speedo Meter",
+      },
+      {
+        value: "72 V 43 ah",
+        icon: <BsSpeedometer  />,
+        name: "Battery Capacity",
+      },
+      {
+        value: "85 kmph",
+        icon: <BsSpeedometer  />,
+        name: "Speed",
+      },
+      {
+        value: " 120 - 150 km",
+        icon: <BsSpeedometer  />,
+        name: "Total-Range",
+      },
+      {
+        value: "17 inch/17 inch",
+        icon: <BsSpeedometer  />,
+        name: "Tyre Specification F & R",
+      },
+      {
+        value: "3 to 4 hr",
+        icon: <BsSpeedometer  />,
+        name: "Charging Time",
+      },
+      {
+        icon: <BsSpeedometer  />,
+        value: "Telescopic & Hydraulic",
+        name: "Suspension F & R",
+      },
+      {
+        icon: <BsSpeedometer  />,
+        value: "Disc",
+        name: "Break F & R",
       },
     ],
   },
@@ -78,14 +164,56 @@ export const Bike = [
     ],
     png: svg1,
     price:"1,99,000",
-    spec: [
+   features: [
       {
-        motor: "Engine",
-        battery: "V-twin",
-        charging: "",
-        range: "",
-        speed: "",
-        brake: "",
+        value: "3000W",
+        name: "Motor Type & Power",
+        icon: <BsSpeedometer  />,
+      },
+      {
+        value: "72 V",
+        icon: <BsSpeedometer  />,
+        name: "Controller Type",
+      },
+      {
+        icon: <BsSpeedometer  />,
+        value: "Digital",
+        name: "Speedo Meter",
+      },
+      {
+        value: "72 V 43 ah",
+        icon: <BsSpeedometer  />,
+        name: "Battery Capacity",
+      },
+      {
+        value: "85 kmph",
+        icon: <BsSpeedometer  />,
+        name: "Speed",
+      },
+      {
+        value: " 120 - 150 km",
+        icon: <BsSpeedometer  />,
+        name: "Total-Range",
+      },
+      {
+        value: "17 inch/17 inch",
+        icon: <BsSpeedometer  />,
+        name: "Tyre Specification F & R",
+      },
+      {
+        value: "3 to 4 hr",
+        icon: <BsSpeedometer  />,
+        name: "Charging Time",
+      },
+      {
+        icon: <BsSpeedometer  />,
+        value: "Telescopic & Hydraulic",
+        name: "Suspension F & R",
+      },
+      {
+        icon: <BsSpeedometer  />,
+        value: "Disc",
+        name: "Break F & R",
       },
     ],
   },

@@ -204,4 +204,24 @@ input ::-moz-focus-outer {
 .cardmainimg{
     display: none;
 }
+.stack {
+
+  padding: 0px;
+
+}
+.fr{
+  display: none !important;
+}
+.stack ul{
+  display: none;
+
+}
+.card {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
 }
